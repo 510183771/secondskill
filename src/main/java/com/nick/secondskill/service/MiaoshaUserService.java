@@ -162,6 +162,7 @@ public class MiaoshaUserService {
 		// 此token对应的是哪一个用户,将我们的私人信息存放到一个第三方的缓存中
 		// prefix:MiaoshaUserKey.token key:token value:用户的信息 -->以后拿到了token就知道对应的用户信息。
 		// MiaoshaUserKey.token-->
+		//写入redis 缓存中
 		redisService.set(MiaoshaUserKey.token, token, user);
 		Cookie cookie = new Cookie(COOKIE1_NAME_TOKEN, token);
 		// 设置cookie的有效期，与session有效期一致

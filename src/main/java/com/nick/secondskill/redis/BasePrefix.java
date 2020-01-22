@@ -1,5 +1,11 @@
 package com.nick.secondskill.redis;
-//定义成抽象类
+
+/**
+ * 定义成抽象类:
+ * 简单的实现一下KeyPrefix，定义成抽象类原因，防止不小心被创建，
+ * 我们不希望BasePrefix被实例化，因为抽象类不允许实例化。
+ * 我们只希望它被继承。不同模块的前缀类都继承他。
+ */
 public abstract class BasePrefix implements KeyPrefix{
 	private int expireSeconds;
 	private String prefix;

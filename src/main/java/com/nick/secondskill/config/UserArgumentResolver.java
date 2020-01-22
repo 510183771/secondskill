@@ -19,7 +19,7 @@ import javax.servlet.http.HttpServletResponse;
 public class UserArgumentResolver implements HandlerMethodArgumentResolver{
 
 	@Autowired					//既然能注入service，那么可以用来容器来管理，将其放在容器中
-			MiaoshaUserService miaoshaUserService;
+	MiaoshaUserService miaoshaUserService;
 	
 	
 	public Object resolveArgument(MethodParameter arg0, ModelAndViewContainer arg1, NativeWebRequest webRequest,
